@@ -5,6 +5,7 @@ import { OrbitControls, TorusKnot, Stars, Float } from '@react-three/drei';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown, Zap, ShieldCheck, BarChart, Mail } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRef } from 'react';
 
 export default function HomePage() {
@@ -90,9 +91,11 @@ export default function HomePage() {
               whileHover={{ scale: 1.05 }}
               className="rounded-xl overflow-hidden shadow-lg"
             >
-              <img
+              <Image
                 src={`https://picsum.photos/600/400?random=${i}`}
                 alt={`project-${i}`}
+                width={600}
+                height={400}
                 className="w-full h-64 object-cover"
               />
               <div className="p-4">
